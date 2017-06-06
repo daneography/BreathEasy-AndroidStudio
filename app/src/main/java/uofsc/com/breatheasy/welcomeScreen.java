@@ -3,6 +3,7 @@ package uofsc.com.breatheasy;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -18,7 +19,8 @@ public class welcomeScreen extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, loginPage.class);
         startActivity(intent);
+
     }
 }
