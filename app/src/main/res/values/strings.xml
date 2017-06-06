@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BreathEasy</string>
+    <string name="welcomeTo">Welcome to</string>
+    <string name="loginButton">loginButton</string>
+    <string name="thisIsMainMenu">mainMenu</string>
 </resources>
