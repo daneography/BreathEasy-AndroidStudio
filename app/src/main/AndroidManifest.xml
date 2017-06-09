@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,12 +32,22 @@
                 android:value=".welcomeScreen" />
         </activity>
         <activity
-            android:name=".loginPage"
-            android:label="@string/title_activity_login_page"
+            android:name=".LoginActivity"
             android:parentActivityName=".welcomeScreen">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".welcomeScreen" />
+                android:value=".LoginActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".welcomeScreen">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RegisterActivity" />
         </activity>
     </application>
 
