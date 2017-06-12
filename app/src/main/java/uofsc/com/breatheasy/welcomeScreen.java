@@ -19,7 +19,7 @@ public class welcomeScreen extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
     }
