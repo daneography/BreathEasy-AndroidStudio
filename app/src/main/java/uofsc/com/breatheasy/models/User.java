@@ -8,28 +8,32 @@ public class User {
 
     private String name;
     private String email;
-    private String patientNumber;
+    private String unique_id;
     private String password;
     private String old_password;
     private String new_password;
 
     public String getName() {
+
         return name;
     }
 
     public String getEmail() {
+
         return email;
     }
 
-    public String getPatientNumber() {
-        return patientNumber;
+    public String getUnique_id() {
+        return unique_id;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 

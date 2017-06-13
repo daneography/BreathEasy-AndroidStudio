@@ -15,7 +15,7 @@ import retrofit2.http.POST;
 
 public interface RequestInterface {
 
-    @POST("BreathEasy/")
+    @POST("breatheasy-login-register/")
     Call<ServerResponse> operation(@Body ServerRequest request);
 
 }

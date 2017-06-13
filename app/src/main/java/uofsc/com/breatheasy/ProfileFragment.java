@@ -130,7 +130,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         editor.putBoolean(Constants.IS_LOGGED_IN,false);
         editor.putString(Constants.EMAIL,"");
         editor.putString(Constants.NAME,"");
-        editor.putString(Constants.PATIENT_NUMBER,"");
+        editor.putString(Constants.UNIQUE_ID,"");
         editor.apply();
         goToLogin();
     }
