@@ -30,7 +30,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class ProfileFragment extends Fragment implements View.OnClickListener{
+public class ProfileFragment extends Fragment implements View.OnClickListener {
+
     private TextView tv_name,tv_email,tv_message;
     private SharedPreferences pref;
     private AppCompatButton btn_change_password,btn_logout;
@@ -65,7 +66,62 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         btn_logout.setOnClickListener(this);
 
     }
+    private void showDialog(){
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View view = inflater.inflate(R.layout.dialogue_change_password, null);
+        et_old_password = (EditText)view.findViewById(R.id.et_old_password);
+        et_new_password = (EditText)view.findViewById(R.id.et_new_password);
+        tv_message = (TextView)view.findViewById(R.id.tv_message);
+        progress = (ProgressBar)view.findViewById(R.id.progress);
+        builder.setView(view);
+        builder.setTitle("Change Password");
+        builder.setPositiveButton("Change Password", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        dialog = builder.create();
+        dialog.show();
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String old_password = et_old_password.getText().toString();
+                String new_password = et_new_password.getText().toString();
+                if(!old_password.isEmpty() && !new_password.isEmpty()){
+
+                    progress.setVisibility(View.VISIBLE);
+                    changePasswordProcess(pref.getString(Constants.EMAIL,""),old_password,new_password);
+
+                }else {
+
+                    tv_message.setVisibility(View.VISIBLE);
+                    tv_message.setText("Fields are empty");
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+
+            case R.id.btn_chg_password:
+                showDialog();
+                break;
+            case R.id.btn_logout:
+                logout();
+                break;
+        }
+    }
 
 
 
@@ -135,4 +191,5 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
             }
         });
     }
-}
+
+    }
