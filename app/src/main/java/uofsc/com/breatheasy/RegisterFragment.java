@@ -1,9 +1,5 @@
 package uofsc.com.breatheasy;
 
-/**
- * Created by danea on 6/12/2017.
- */
-
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
