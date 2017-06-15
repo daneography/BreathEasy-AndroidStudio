@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 public class mainMenuFragment extends Fragment implements View.OnClickListener {
-    private AppCompatButton btnSettings;
+    private AppCompatButton btnSettings, btnMindfulness, btnDaily, btnCommunities;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -25,10 +25,16 @@ public class mainMenuFragment extends Fragment implements View.OnClickListener {
 
     private void initViews(View view){
 
-
         btnSettings = (AppCompatButton)view.findViewById(R.id.btnSettings);
+        btnCommunities = (AppCompatButton)view.findViewById(R.id.btnCommunities);
+        btnDaily = (AppCompatButton)view.findViewById(R.id.btnDaily);
+        btnMindfulness = (AppCompatButton)view.findViewById(R.id.btnMindfulness);
+
 
         btnSettings.setOnClickListener(this);
+        btnCommunities.setOnClickListener(this);
+        btnDaily.setOnClickListener(this);
+        btnMindfulness.setOnClickListener(this);
     }
 
     @Override
@@ -38,15 +44,46 @@ public class mainMenuFragment extends Fragment implements View.OnClickListener {
             case R.id.btnSettings:
                 goToSettings();
                 break;
+            case R.id.btnCommunities:
+                goToCommunities();
+                break;
+            case R.id.btnDaily:
+                goToDaily();
+                break;
+            case R.id.btnMindfulness:
+                goToMindfulness();
+                break;
         }
 
     }
 
+    private void goToCommunities() {
+        Fragment communities = new communitiesFragment();
+        FragmentTransaction ft3 = getFragmentManager().beginTransaction();
+        ft3.replace(R.id.fragment_frame, communities);
+        ft3.commit();
+
+    }
+
+    private void goToDaily() {
+        Fragment daily = new dailyFragment();
+        FragmentTransaction ft2 = getFragmentManager().beginTransaction();
+        ft2.replace(R.id.fragment_frame, daily);
+        ft2.commit();
+    }
+
+    private void goToMindfulness() {
+        Fragment mindfulness = new mindfulnessFragment();
+        FragmentTransaction ft1 = getFragmentManager().beginTransaction();
+        ft1.replace(R.id.fragment_frame, mindfulness);
+        ft1.commit();
+    }
+
     private void goToSettings(){
 
-        Fragment login = new ProfileFragment();
+        Fragment settings = new ProfileFragment();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_frame,login);
+        ft.replace(R.id.fragment_frame,settings);
         ft.commit();
     }
 }
