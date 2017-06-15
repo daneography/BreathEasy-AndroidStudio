@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 
 public class mainMenuFragment extends Fragment implements View.OnClickListener {
-    private TextView tvMainMenu;
     private AppCompatButton btnSettings;
 
     @Override
@@ -26,7 +25,7 @@ public class mainMenuFragment extends Fragment implements View.OnClickListener {
 
     private void initViews(View view){
 
-        tvMainMenu = (TextView)view.findViewById(R.id.tvMainMenu);
+
         btnSettings = (AppCompatButton)view.findViewById(R.id.btnSettings);
 
         btnSettings.setOnClickListener(this);
