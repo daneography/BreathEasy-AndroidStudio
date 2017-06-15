@@ -115,7 +115,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                     editor.putString(Constants.NAME,resp.getUser().getName());
                     editor.putString(Constants.UNIQUE_ID,resp.getUser().getUnique_id());
                     editor.apply();
-                    goToProfile();
+                    goToMainMenu();
 
                 }
                 progress.setVisibility(View.INVISIBLE);
@@ -140,11 +140,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         ft.commit();
     }
 
-    private void goToProfile(){
+    private void goToMainMenu(){
 
-        Fragment profile = new ProfileFragment();
+        Fragment mainMenu = new mainMenuFragment();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_frame,profile);
+        ft.replace(R.id.fragment_frame,mainMenu);
         ft.commit();
     }
 }

@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uofsc.com.breatheasy.mainMenuFragment">
+
+
+    <TextView
+        android:id="@+id/tvMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="MainMenu"
+        android:textSize="40dp"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Settings"
+        android:textColor="@android:color/white" />
+
+</FrameLayout>

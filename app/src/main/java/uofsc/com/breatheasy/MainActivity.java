@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
     private void initFragment() {
         Fragment fragment;
         if(pref.getBoolean(Constants.IS_LOGGED_IN,false)){
-            fragment = new ProfileFragment();
+            fragment = new mainMenuFragment();
         }else{
-            fragment = new welcomeView ();
+            fragment = new LoginFragment();
         }
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_frame,fragment);
