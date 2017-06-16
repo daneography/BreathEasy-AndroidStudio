@@ -38,14 +38,14 @@ public class welcomeView extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.btnLogin:
+            case R.id.tv_login:
                 Fragment login = new LoginFragment();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_frame, login);
                 ft.commit();
                 break;
 
-            case R.id.btnRegister:
+            case R.id.btn_register:
                 Fragment register = new RegisterFragment();
                 FragmentTransaction ft1 = getFragmentManager().beginTransaction();
                 ft1.replace(R.id.fragment_frame, register);
