@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity{
         if(pref.getBoolean(Constants.IS_LOGGED_IN,false)){
             fragment = new mainMenuFragment();
         }else{
-            fragment = new LoginFragment();
+            fragment = new welcomeView();
         }
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_frame,fragment);
