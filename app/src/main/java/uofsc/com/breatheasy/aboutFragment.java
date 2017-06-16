@@ -12,15 +12,17 @@ import android.widget.TextView;
 
 public class aboutFragment extends Fragment{
     private TextView tvAboutTitle,tvAboutText;
+    private final static String TAG_FRAGMENT = ".welcomeView";
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_about,container,false);
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
         initViews(view);
         return view;
     }
+
 
     private void initViews(View view){
 

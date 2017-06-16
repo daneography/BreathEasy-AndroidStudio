@@ -23,4 +23,13 @@ public class mindfulnessFragment extends Fragment {
     private void initViews(View view){
         tvMindfulness = (TextView)view.findViewById(R.id.tvMinfulness);
     }
+
+    private void goToLogin(){
+
+        Fragment back = new LoginFragment();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame,back).addToBackStack("tag");
+        ft.commit();
+    }
+
 }
