@@ -14,8 +14,8 @@
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btnMindfulness"
         android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -27,12 +27,12 @@
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btnCommunities"
         android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimary"
         android:text="Communities"
         android:textColor="@android:color/white" />
@@ -40,8 +40,8 @@
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btnDaily"
         android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -53,12 +53,12 @@
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btnSettings"
         android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimary"
         android:text="Settings"
         android:textColor="@android:color/white" />
