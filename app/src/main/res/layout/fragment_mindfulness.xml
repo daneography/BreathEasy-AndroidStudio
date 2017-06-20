@@ -4,15 +4,85 @@
     android:layout_height="match_parent"
     tools:context="uofsc.com.breatheasy.mindfulnessFragment">
 
-    <TextView
-        android:id="@+id/tvMinfulness"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="mindfulness fragment"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textSize="40dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 1"
+            android:textAlignment="center"
+            android:textSize="60px"
+            />
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 2"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px"/>
+
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 3"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px"/>
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 4"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px" />
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 5"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px" />
+
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek6"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 6"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px" />
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek7"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 7"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px"/>
+            <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnWeek8"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Week 8"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="60px"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

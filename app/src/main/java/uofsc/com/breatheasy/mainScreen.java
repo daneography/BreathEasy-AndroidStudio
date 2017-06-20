@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.List;
+
 public class mainScreen extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,4 +24,6 @@ public class mainScreen extends AppCompatActivity {
         ft.replace(R.id.fragment_frame,fragment);
         ft.commit();
     }
+
+
 }

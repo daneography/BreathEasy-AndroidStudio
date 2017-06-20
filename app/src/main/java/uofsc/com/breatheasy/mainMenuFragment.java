@@ -86,4 +86,8 @@ public class mainMenuFragment extends Fragment implements View.OnClickListener {
         ft.replace(R.id.fragment_frame,settings);
         ft.commit();
     }
+
+    public boolean onBackPressed(){
+        return false;
+    }
 }
