@@ -77,10 +77,10 @@ public class mainMenuFragment extends Fragment implements View.OnClickListener {
         FragmentTransaction ft1 = getFragmentManager().beginTransaction();
         ft1.replace(R.id.fragment_frame, mindfulness);
         ft1.commit();
+
     }
 
     private void goToSettings(){
-
         Fragment settings = new ProfileFragment();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_frame,settings);
