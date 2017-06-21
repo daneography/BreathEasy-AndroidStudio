@@ -1,6 +1,8 @@
 package uofsc.com.breatheasy;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -12,9 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import static android.R.id.message;
+
 
 public class mindfulnessFragment extends Fragment implements View.OnClickListener {
     private AppCompatButton btnWeek1,btnWeek2,btnWeek3,btnWeek4,btnWeek5,btnWeek6,btnWeek7,btnWeek8;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_mindfulness,container,false);
@@ -49,6 +54,10 @@ public class mindfulnessFragment extends Fragment implements View.OnClickListene
 
         switch (v.getId()){
             case R.id.btnWeek1:
+                Intent intent = new Intent(getActivity().getBaseContext(), MainActivity.class);
+                intent.putExtra("week 1 selected", message);
+                getActivity().startActivity(intent);
+                goToExercises();
 
                break;
             case R.id.btnWeek2:
@@ -60,7 +69,23 @@ public class mindfulnessFragment extends Fragment implements View.OnClickListene
             case R.id.btnWeek4:
 
                 break;
+            case R.id.btnWeek5:
+
+                break;
+            case R.id.btnWeek6:
+
+                break;
+            case R.id.btnWeek7:
+
+                break;
+            case R.id.btnWeek8:
+
+                break;
         }
+
+    }
+
+    public void goToExercises(){
 
     }
 

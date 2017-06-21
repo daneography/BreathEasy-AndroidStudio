@@ -22,9 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private void initFragment() {
         Fragment fragment;
         if(pref.getBoolean(Constants.IS_LOGGED_IN,false)){
-            fragment = new Fragment();
-            Intent intent = new Intent(MainActivity.this, mainScreen.class);
-            startActivity(intent);
+            fragment = new mainMenuFragment();
+
         }else{
             fragment = new welcomeView();
         }
